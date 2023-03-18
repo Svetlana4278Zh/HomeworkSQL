@@ -1,4 +1,3 @@
-CREATE DATABASE skypro;
 CREATE TABLE employee (
                           id BIGSERIAL NOT NULL PRIMARY KEY,
                           first_name VARCHAR(50) NOT NULL,
@@ -18,3 +17,5 @@ SELECT * FROM employee;
 
 DELETE FROM employee WHERE id = 1;
 SELECT * FROM employee;
+
+
