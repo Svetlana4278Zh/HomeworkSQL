@@ -37,14 +37,9 @@ SELECT first_name AS Имя,
         MIN (age) AS Самый_юный_возраст
         FROM employee
         GROUP BY Имя;
-SELECT empl.Имя,
-        empl.Максимальный_возраст
-        FROM (
-            SELECT first_name AS Имя,
-            MAX (age) AS Максимальный_возраст,
-            COUNT(first_name)
-            FROM employee
-            GROUP BY Имя
-            HAVING COUNT(first_name) > 1
-            ORDER BY Максимальный_возраст
-        ) empl;
+SELECT SELECT first_name AS Имя,
+        MAX (age) AS Максимальный_возраст
+        FROM employee
+        GROUP BY Имя
+        HAVING COUNT(first_name) > 1
+        ORDER BY Максимальный_возраст;
